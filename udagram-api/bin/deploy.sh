@@ -1,0 +1,1 @@
+eb deploy Elasticapptest2-env
