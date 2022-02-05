@@ -34,6 +34,11 @@ jobs:
           command: |
             npm run frontend:deploy
       - run:
+          name: configure for deploy
+          command: |
+            cd udagram-api
+            eb init
+      - run:
           name: Back-End Deploy
           command: |
             npm run backend:deploy
