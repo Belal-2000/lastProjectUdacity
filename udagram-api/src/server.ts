@@ -23,7 +23,13 @@ import { config } from "./config/config";
 
   app.use(bodyParser.json());
 
-  app.use(cors());
+  app.use(cors({
+    methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
+    origin: '*',
+    Headers: {
+      "access-control-allow-origins": "*"
+    }
+  }));
 
   app.use("/api/v0/", IndexRouter);
 
