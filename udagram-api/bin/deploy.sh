@@ -1,1 +1,1 @@
-eb deploy Elasticapptest2-env
+eb deploy $application_name
