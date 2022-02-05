@@ -13,9 +13,7 @@ jobs:
       - checkout
       - aws-cli/setup
       - eb/setup
-      - eb/deploy:
-          context: aws-creds
-          environment-name: $my-app
+
       - run:
           name: Front-End Install
           command: |
