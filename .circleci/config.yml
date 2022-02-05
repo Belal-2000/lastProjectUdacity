@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.0
   aws-cli: circleci/aws-cli@1.3.1
+  eb: circleci/aws-elastic-beanstalk@1.0.0
 jobs:
   build:
     docker:
@@ -11,15 +12,7 @@ jobs:
         node-version: '16.13'
       - checkout
       - aws-cli/setup
-      - run:
-          name: Install pip
-          command: |
-            sudo apt update
-            sudo apt install -y python3-pip python-dev
-      - run:
-          name: Install AWS dependencies
-          command: |
-            sudo pip install awsebcli
+      - eb/setup
       - run:
           name: Front-End Install
           command: |
