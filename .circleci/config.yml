@@ -12,6 +12,15 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
+        name: Install pip
+        command: |
+          sudo apt update
+          sudo apt install -y python-pip python-dev
+      - run:
+        name: Install AWS dependencies
+        command: |
+          sudo pip install awsebcli
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
