@@ -25,10 +25,7 @@ import { config } from "./config/config";
 
   app.use(cors({
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
-    origin: '*',
-    Headers: {
-      "access-control-allow-origins": "*"
-    }
+    origin: '*'
   }));
 
   app.use("/api/v0/", IndexRouter);
