@@ -28,8 +28,8 @@ import { config } from "./config/config";
     origin: '*'
   }));
   app.use(function(req:express.Request, res:express.Response, next:express.NextFunction) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    req.header("Access-Control-Allow-Origin", "*");
+    req.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
 
