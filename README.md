@@ -1,5 +1,5 @@
 # App url
-- Yu can accsses it from [here](http://udacityexbucket.s3-website-us-east-1.amazonaws.com/home)
+- You can accsses the app from [here](http://udacityexbucket.s3-website-us-east-1.amazonaws.com)
 
 # Udagram
 
