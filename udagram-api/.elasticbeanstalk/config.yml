@@ -1,0 +1,21 @@
+branch-defaults:
+  default:
+    environment: ${EB_ENV}
+environment-defaults:
+  Elasticapptest2-env:
+    branch: null
+    repository: null
+deploy:
+  artifact: www/archive.zip
+global:
+  application_name: ${application_name}
+  default_ec2_keyname: null
+  default_platform: Node.js 14 running on 64bit Amazon Linux 2
+  default_region: ${AWS_DEFAULT_REGION}
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  sc: null
+  workspace_type: Application
