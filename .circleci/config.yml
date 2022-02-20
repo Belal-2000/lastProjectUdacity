@@ -14,6 +14,8 @@ jobs:
       - checkout
       - aws-cli/setup
       - eb/setup
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - run:
           name: Front-End Install
           command: |
