@@ -7,25 +7,13 @@ orbs:
 jobs:
   build:
     docker:
-      - image: "cimg/base:stable"
+      - image: circleci/node:10-browsers
     steps:
-      - browser-tools/install-browser-tools:
-          chrome-version: 85.0.4183.102
-          firefox-version: 80.0.1
       - node/install:
         node-version: '16.13'
       - checkout
       - aws-cli/setup
       - eb/setup
-      - run:
-          name: Chrome testing env
-          command: |
-          sudo apt-get install -y xvfb
-          sudo apt-get -y install xorg xvfb gtk2-engines-pixbuf
-          sudo apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
-          sudo apt-get -y install imagemagick x11-apps
-          sudo Xvfb -ac :99 -screen 0 1280x1024x16 &
-          export DISPLAY=:99
       - run:
           name: Front-End Install
           command: |
