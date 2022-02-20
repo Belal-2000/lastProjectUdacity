@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && ng build",
-    "test": "ng test --no-watch --no-progress",
+    "test": "ng test --source-map=false --no-watch --source-map=false ",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
