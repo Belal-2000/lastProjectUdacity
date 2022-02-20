@@ -7,7 +7,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/node:16.13-browsers
+      - image: cimg/base:stable
     steps:
       - node/install:
         node-version: '16.13'
@@ -16,6 +16,11 @@ jobs:
       - eb/setup
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
+       - run:
+            name: Check install
+            command: |
+              google-chrome --version
+              chromedriver --version
       - run:
           name: Front-End Install
           command: |
