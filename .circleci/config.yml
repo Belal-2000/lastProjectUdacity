@@ -34,7 +34,7 @@ jobs:
           command: |
             npm run backend:test
       - run:
-          name: Front-End Test
+          name: Front-End Test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
           command: |
             npm run frontend:test
       - run:
