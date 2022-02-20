@@ -16,3 +16,6 @@
 - Build both the back and front end.
 - Deploying the angular APP to S3 using aws-cli.
 - Deploying the API to Elastic Beanstalk using eb.
+
+#### Simple giagram for the process
+![Diagram for AWS](../pipeline.png)

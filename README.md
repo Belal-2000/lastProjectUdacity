@@ -24,4 +24,4 @@
 - Then made a pipeline using circleci to automate the procces of deploying the app.
 
 
-
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/?branch=main)

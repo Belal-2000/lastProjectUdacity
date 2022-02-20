@@ -9,8 +9,12 @@ import bodyParser from "body-parser";
 import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 import { config } from "./config/config";
 
-(async () => {
-  dotenv.config();
+dotenv.config();
+
+const app = express();
+const port = config.appPort || 8080;
+
+(async (app: express.Application) => {
 
   await sequelize.addModels(V0_FEED_MODELS);
   await sequelize.addModels(V0_USER_MODELS);
@@ -18,8 +22,6 @@ import { config } from "./config/config";
 
   console.log("Database Connected");
 
-  const app = express();
-  const port = config.appPort || 8080;
 
   app.use(bodyParser.json());
 
@@ -36,9 +38,16 @@ import { config } from "./config/config";
   });
 
   // Start the Server
+  
+})(app);
+
+setTimeout(() => {
   app.listen(port, () => {
-    console.log(typeof port)
     console.log(`server running ${process.env.URL}:${port}`);
     console.log(`press CTRL+C to stop server`);
   });
-})();
+}, 2000);
+
+
+
+export default app;
