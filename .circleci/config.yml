@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: "cimg/base:stable"
+      - image: 'angular/ngcontainer:latest'
     steps:
       - node/install:
         node-version: '16.13'

@@ -24,4 +24,6 @@
 - Then made a pipeline using circleci to automate the procces of deploying the app.
 
 
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/?branch=main)
+###### It failed since my AWS account is closed 
+###### So i can't deploy my app anymore 
+[![CircleCI](https://circleci.com/gh/Belal-2000/lastProjectUdacity/tree/main.svg?style=svg)](https://circleci.com/gh/Belal-2000/lastProjectUdacity/?branch=main)
