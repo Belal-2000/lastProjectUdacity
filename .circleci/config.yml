@@ -9,7 +9,9 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-      - browser-tools/install-browser-tools
+      - browser-tools/install-browser-tools:
+          chrome-version: 85.0.4183.102
+          firefox-version: 80.0.1
       - node/install:
         node-version: '16.13'
       - checkout
